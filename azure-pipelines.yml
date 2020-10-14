@@ -30,7 +30,7 @@ jobs:
     runOnce:
       preDeploy:
         steps:  
-        - publish: $(System.DefaultWorkingDirectory)/openedx/themes
+        - publish: $(System.DefaultWorkingDirectory)/OpenEdxTheme
           artifact: OpenEdxTheme
         - download: current
           artifact: OpenEdxTheme
@@ -39,4 +39,4 @@ jobs:
         steps:
         - script: | 
             echo my first deployment
-            cp '$(Pipeline.workspace)/OpenEdxTheme/*' /home/edxbsv/.local/share/tutor/env/build/openedx/themes
+            cp '$(System.DefaultWorkingDirectory)/OpenEdxTheme' /home/edxbsv/.local/share/tutor/env/build/openedx/themes
