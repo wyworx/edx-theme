@@ -28,6 +28,13 @@ jobs:
     resourceType: VirtualMachine
   strategy:
     runOnce:
+      preDeploy:
+        steps:  
+        - download: current
+          artifact: drop
+        - script: echo current artifact downloaded
       deploy:
         steps:
-        - script: echo my first deployment
+        - script: | 
+            echo my first deployment
+            cp '$(Pipeline.workspace)/drop/*' /home/edxbsv/.local/share/tutor/env/build/openedx/themes
