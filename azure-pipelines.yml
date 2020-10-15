@@ -19,19 +19,6 @@ pool:
 #  displayName: 'Run a multi-line script'
 
 jobs:
-- job: Build
-  displayName: Build 
-  steps:
-  - task: CopyFiles@2
-    displayName: 'Copy Files to artifact staging directory'
-    inputs:
-      SourceFolder: '$(System.DefaultWorkingDirectory)'
-#      Contents: '**/target/*.?(war|jar)'
-      TargetFolder: $(Build.ArtifactStagingDirectory)
-  - upload: $(Build.ArtifactStagingDirectory)
-    artifact: drop
-
-jobs:
 - deployment: VMDeploy
   displayName: DeployOpenEdxTheme
   pool:
