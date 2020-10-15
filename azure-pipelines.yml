@@ -32,9 +32,11 @@ jobs:
         steps:  
 #        - publish: $(System.DefaultWorkingDirectory)/OpenEdxTheme
 #          artifact: OpenEdxTheme
-        - download: current
-          artifact: OpenEdxTheme
-        - script: echo current artifact downloaded
+#        - download: current
+#          artifact: OpenEdxTheme
+#        - script: echo current artifact downloaded
+         - task: DownloadPipelineArtifact@2
+           displayName: 'Download Pipeline Artifact'
       deploy:
         steps:
         - script: | 
