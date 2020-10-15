@@ -48,8 +48,16 @@ jobs:
 #        - download: current
 #          artifact: OpenEdxTheme
 #        - script: echo current artifact downloaded
-         - task: DownloadPipelineArtifact@2
-           displayName: 'Download Pipeline Artifact'
+          - task: CopyFiles@2
+            displayName: 'Copy Files to artifact staging directory'
+            inputs:
+              SourceFolder: '$(System.DefaultWorkingDirectory)'
+#              Contents: '**/target/*.?(war|jar)'
+              TargetFolder: $(Build.ArtifactStagingDirectory)
+          - upload: $(Build.ArtifactStagingDirectory)
+            artifact: drop
+          - task: DownloadPipelineArtifact@2
+            displayName: 'Download Pipeline Artifact'
       deploy:
         steps:
         - script: | 
