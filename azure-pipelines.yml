@@ -26,3 +26,4 @@ jobs:
             cd /home/edxbsv/.local/share/tutor/env/build/openedx/themes/edx-theme
             pwd
             git pull
+            tutor local settheme edx-theme $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
