@@ -8,16 +8,7 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
-#steps:
-#- script: echo Hello, world!
-#  displayName: 'Run a one-line script'
-
-#- script: |
-#    echo Add other tasks to build, test, and deploy your project.
-#    echo See https://aka.ms/yaml
-#  displayName: 'Run a multi-line script'
-
+  
 jobs:
 - deployment: VMDeploy
   displayName: DeployOpenEdxTheme
@@ -28,25 +19,10 @@ jobs:
     resourceType: VirtualMachine
   strategy:
     runOnce:
-      preDeploy:
-        steps:  
-#        - publish: $(System.DefaultWorkingDirectory)/OpenEdxTheme
-#          artifact: OpenEdxTheme
-#        - download: current
-#          artifact: OpenEdxTheme
-#        - script: echo current artifact downloaded
-          - task: CopyFiles@2
-            displayName: 'Copy Files to artifact staging directory'
-            inputs:
-              SourceFolder: '$(System.DefaultWorkingDirectory)'
-#              Contents: '**/target/*.?(war|jar)'
-              TargetFolder: $(Build.ArtifactStagingDirectory)
-          - upload: $(Build.ArtifactStagingDirectory)
-            artifact: drop
-          - task: DownloadPipelineArtifact@2
-            displayName: 'Download Pipeline Artifact'
       deploy:
         steps:
         - script: | 
             echo my first deployment
-#            cp '$(System.DefaultWorkingDirectory)/OpenEdxTheme' /home/edxbsv/.local/share/tutor/env/build/openedx/themes
+            cd /home/edxbsv/.local/share/tutor/env/build/openedx/themes/edx-theme
+            pwd
+            git pull
