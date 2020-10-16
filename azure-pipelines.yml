@@ -22,8 +22,12 @@ jobs:
       deploy:
         steps:
         - script: | 
-            echo my first deployment
+            echo updating 5thwork theme
             cd /home/edxbsv/.local/share/tutor/env/build/openedx/themes/edx-theme
-            pwd
             git pull
+            tutor local stop
+            tutor images build openedx \
+              --build-arg EDX_PLATFORM_REPOSITORY=https://github.com/wyworx/edx-platform.git \
+              --build-arg EDX_PLATFORM_VERSION=ironwood-custom
             tutor local settheme edx-theme $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
+            tutor local start
