@@ -86,6 +86,7 @@ from openedx.core.djangoapps.user_api.accounts.utils import is_secondary_email_f
         var event = new Event('change', { bubbles: true });
         element.dispatchEvent(event);
         $('#reader-message').text("Your Bitcoin SV address has been updated.");
+        alert("QR Code Read Successfully");
      }
 
      function renderQRCodeScanner() {
