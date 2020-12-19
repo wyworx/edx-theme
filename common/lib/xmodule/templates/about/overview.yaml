@@ -1,0 +1,22 @@
+---
+metadata:
+    display_name: overview
+
+data: |
+  <section class="about">
+    <h2>About This Course.</h2>
+    <p>Add your course description here.  Follow the following example.  Learn about Bitcoin - a Digital Decentralized Currency.  This 2-minute video explains the following terminologies: "digital ledger", "wallet", "block chain", and "miners".</p>
+  </section>
+
+  <section class="course-staff">
+    <h2>Fund This Course</h2>
+    <article class="teacher">
+      <div class="teacher-image" id="qrcode-image">
+        <img src="/static/public_key_test.PNG" align="left" style="margin:0 20 px 0" alt="Fund This Course">
+      </div>
+
+      <h3>Your Course Title Here</h3>
+      <p>Scan the QR Code to fund this course.</p>
+    </article>
+  </section>
+
