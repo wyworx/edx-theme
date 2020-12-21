@@ -32,5 +32,5 @@ jobs:
             tutor local settheme edx-theme $(tutor config printvalue LMS_HOST) $(tutor config printvalue CMS_HOST)
             tutor local start --detach
             echo updating mysql ip address
-            mysql_ip=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 0e2a97d6f9268a412efe5b789ed319ffc12c6919d278b389f5ce00b00cf37d5b)
+            mysql_ip=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}'  tutor_local_mysql_1)
             az keyvault secret set --vault-name "key-edx-bsv" --name "openedx-mysql-host-ip" --value $mysql_ip
