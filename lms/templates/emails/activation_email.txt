@@ -13,7 +13,9 @@ https://${ site }/activate/${ key }
 http://${ site }/activate/${ key }
 % endif
 
-${_("2) In order to get paid, please add your public address on the Account Settings page.")}
+${_("2) Download the Centbee mobile app - https://www.centbee.com/wallet/")}
+
+${_("3) In order to get paid, please add your BSV public address on the Account Settings page.")}
 
 % if is_secure:
 https://${ site }/account/settings
