@@ -251,6 +251,12 @@ from student.models import CourseEnrollment
             <%include file="${static.get_template_path('registration/account_activation_sidebar_notice.html')}" />
           </div>
         %endif
+        
+        %if display_download_centbee_mobile_app_message:
+          <div class="sidebar-notification">
+            <%include file="${static.get_template_path('registration/download_centbee_mobile_app_sidebar_notice.html')}" />
+          </div>
+        %endif
 
         %if display_add_public_address_message:
           <div class="sidebar-notification">
