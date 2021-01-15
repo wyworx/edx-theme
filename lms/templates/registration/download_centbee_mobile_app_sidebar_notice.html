@@ -1,0 +1,22 @@
+<%page expression_filter="h"/>
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<div class="profile-sidebar" role="region" aria-labelledby="download-centbee-mobile-app-title">
+  <header class="profile">
+    <h2 id="download-centbee-mobile-app-title" class="download-centbee-mobile-app-title sr">${_("Download Centbee Mobile App")}: </h2>
+  </header>
+  <div class="user-info">
+    <ul>
+      <li class="status status-verification warning" aria-labelledby="status-title" tabindex="-1">
+        <span id="status-title" class="title status-title">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <span class="sr">Notice</span>
+          ${_("Download the Centbee Mobile App.")}
+        </span>
+        <p class="status-note">Download and install the Centbee Mobile App. <a target="_blank" href="https://www.centbee.com/wallet/">Download now</a></p>
+      </li>
+    </ul>
+  </div>
+</div>
