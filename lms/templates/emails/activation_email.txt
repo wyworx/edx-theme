@@ -13,9 +13,9 @@ https://${ site }/activate/${ key }
 http://${ site }/activate/${ key }
 % endif
 
-${_("2) Download the Centbee mobile app - https://www.centbee.com/wallet/")}
+${_("2) If you don't have a Bitcoin SV wallet yet, download the Centbee mobile app - https://www.centbee.com/wallet/")}
 
-${_("3) To earn Bitcoin, please add your Bitcoin SV address on the Account Settings page.")}
+${_("3) To earn Bitcoin, please add your Bitcoin SV address or Paymail on the Account Settings page.")}
 
 % if is_secure:
 https://${ site }/account/settings
