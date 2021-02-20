@@ -4,7 +4,7 @@
 ${_("You're almost there!")}
 
 ${_("1) Activate your account to access engaging, high-quality "
-"{platform_name} courses and earn Bitcoin! Note that you will not be able to log back into your account until "
+"{platform_name} courses and earn Bitcoin SV! Note that you will not be able to log back into your account until "
 "you have activated it.").format(platform_name=platform_name)}
 
 % if is_secure:
@@ -15,7 +15,7 @@ http://${ site }/activate/${ key }
 
 ${_("2) If you don't have a Bitcoin SV wallet yet, download the Centbee mobile app - https://www.centbee.com/wallet/")}
 
-${_("3) To earn Bitcoin, please add your Bitcoin SV address or Paymail on the Account Settings page.")}
+${_("3) To earn Bitcoin SV, please add your address or Paymail on the Account Settings page.")}
 
 % if is_secure:
 https://${ site }/account/settings
