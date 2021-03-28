@@ -125,6 +125,22 @@ from six import string_types
   }
 
   getCourse().then(data => window.onload = renderQrCode(data.course_public_address));  
+    
+  var userName = document.querySelector('.username').innerHTML;
+
+  if (userName) {
+    var referralCodeMessage = " Use referral code " +  userName + " and earn more Bitcoin when you refer your friends to https://5thwork.com"
+
+    var twitterHref = document.querySelectorAll('.share')[0].href;
+    twitterHref = twitterHref + referralCodeMessage;
+    document.querySelectorAll('.share')[0].href = twitterHref;
+
+    var emailHref = document.querySelectorAll('.share')[2].href;
+    emailHref = emailHref + referralCodeMessage;
+    document.querySelectorAll('.share')[2].href = emailHref;
+
+
+  }
   
   </script>
 
