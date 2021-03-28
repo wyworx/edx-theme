@@ -40,7 +40,7 @@ from six import text_type
 
         email_subject = u"mailto:?subject={subject}&body={body}".format(
             subject=_("Take a course with {platform} online").format(platform=platform_name),
-            body=_("I just enrolled in {number} {title} through {platform} {url}").format(
+            body=_("I earned Bitcoin by completing {number} {title} through {platform} {url}").format(
                 number=course.number,
                 title=course.display_name_with_default_escaped,
                 platform=platform_name,
