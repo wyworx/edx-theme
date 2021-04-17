@@ -4,7 +4,7 @@
 ${_("You're almost there!")}
 
 ${_("1) Activate your account to access engaging, high-quality "
-"{platform_name} courses and earn Bitcoin SV! Note that you will not be able to log back into your account until "
+"{platform_name} courses and earn Bitcoin SV by clicking on the link below. Note that you will not be able to log back into your account until "
 "you have activated it.").format(platform_name=platform_name)}
 
 % if is_secure:
