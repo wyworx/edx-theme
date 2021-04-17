@@ -15,7 +15,7 @@ http://${ site }/activate/${ key }
 
 ${_("2) If you don't have a Bitcoin SV wallet yet, download the Centbee mobile app - https://www.centbee.com/wallet/")}
 
-${_("3) To earn Bitcoin SV, please add your address or Paymail on the Account Settings page.")}
+${_("3) To earn Bitcoin SV, please add your public address or Paymail on the Account Settings page.")}
 
 % if is_secure:
 https://${ site }/account/settings
