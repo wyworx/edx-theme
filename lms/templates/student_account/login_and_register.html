@@ -28,6 +28,11 @@
     <script type="text/javascript" src="${static.url('js/student_account/tos_modal.js')}"></script>
     % endif
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+   function onSubmit(token) {
+     document.getElementById("register").submit();
+   }
+ </script>
 </%block>
 
 <%block name="header_extras">
