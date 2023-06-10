@@ -63,7 +63,7 @@
     </div>
 
     <div class="g-recaptcha" data-sitekey="6LcTvYQmAAAAAIQgBk-0N6QXxurr5ndxaSj-D5kp"></div>
-    <input type="submit" value="submit" class="action action-primary action-update js-register register-button">
+    <button type="submit" class="action action-primary action-update js-register register-button">
     	<% if ( context.registerFormSubmitButtonText ) { %><%- context.registerFormSubmitButtonText %><% } else { %><%- gettext("Create Account") %><% } %>
     </button>
 </form>
