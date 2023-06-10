@@ -62,8 +62,8 @@
         </label>
     </div>
 
-    <div class="g-recaptcha" data-sitekey="6LcTvYQmAAAAAIQgBk-0N6QXxurr5ndxaSj-D5kp"></div>
-    <button type="submit" class="action action-primary action-update js-register register-button">
+    <div class="g-recaptcha" data-sitekey="6LcTvYQmAAAAAIQgBk-0N6QXxurr5ndxaSj-D5kp" data-callback="onRecaptchaSuccess"></div>
+    <button id="btnRegister" disabled type="submit" class="action action-primary action-update js-register register-button">
     	<% if ( context.registerFormSubmitButtonText ) { %><%- context.registerFormSubmitButtonText %><% } else { %><%- gettext("Create Account") %><% } %>
     </button>
 </form>
