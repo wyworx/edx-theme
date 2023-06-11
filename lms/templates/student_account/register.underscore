@@ -57,7 +57,7 @@
         <input type="checkbox" id="toggle_optional_fields" class="input-block checkbox"">
         <label for="toggle_optional_fields">
             <span class="label-text">
-                <%- gettext("Earn more Bitcoin by submitting a referral code. Enter the user id of the person who referred you to 5thwork") %>
+                <%- gettext("Earn more Bitcoin by submitting a referral code. Enter the username of the person who referred you to 5thwork.") %>
             </span>
         </label>
     </div>
