@@ -119,8 +119,8 @@ from six import string_types
   function renderQrCode(address) {
     var element = document.getElementById("qrcode-image");
     element.innerHTML = '<img style="margin:0 20 px 0" alt="' + address + '" '
-                            + 'src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;'
-                            + 'chl=' + address + '" '
+                            + 'src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;'
+                            + 'data=' + address + '" '
                             + 'align="left">';
   }
 
